@@ -1,9 +1,15 @@
 /* EXERCÍCIO 1: fontes */
 /* importá-las aqui... e definir as `font-family` da turminha... */
-
+@import "/fonts/verdana.css";
+@import "/fonts/ravie.css";
 
 body {
+  font-family: "Verdana";
   background-color: #fff;
+}
+
+h1 {
+  font-family: "Ravie";
 }
 
 strong {
