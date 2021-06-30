@@ -3,9 +3,20 @@
 @import "fonts/verdana.css";
 @import "fonts/ravie.css";
 
+:root {
+  --cor-do-fundo: #fff;
+  --cor-cardapio: rgba(255, 255, 255, 0.2);
+  --cor-do-texto: #333;
+  --cor-cabecalho-h1: #e90c0c;
+  --cor-grad-a: #f6f1b2;
+  --cor-grad-b: #4599b2;
+  --cor-border-cardapio: #aac0ae;
+  --cor-border-fora: #d3d3d3;
+}
+
 body {
   font-family: "Verdana", sans-serif;
-  background-color: #fff;
+  background-color: var(--cor-do-fundo);
   margin: 0px;
 }
 
@@ -22,29 +33,29 @@ html, body, #recipiente {
 }
 
 #recipiente {
-  background-image: linear-gradient(to bottom, #f6f1b2, #4599b2 80%);
-  border-left: 1px solid #d3d3d3;
-  border-right: 1px solid #d3d3d3;
+  background-image: linear-gradient(to bottom, var(--cor-grad-a), var(--cor-grad-b) 80%);
+  border-left: 1px solid var(--cor-border-fora);
+  border-right: 1px solid var(--cor-border-fora);
 }
 
 #cardapio {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-top: 1px solid #aac0ae;
-  border-bottom: 1px solid #aac0ae;
-  border-left: 1px solid #aac0ae;
+  background-color: var(--cor-cardapio);
+  border-top: 1px solid var(--cor-border-cardapio);
+  border-bottom: 1px solid var(--cor-border-cardapio);
+  border-left: 1px solid var(--cor-border-cardapio);
   padding-left: 20px;
   padding-right: 20px;
 }
 
 #cardapio h3 {
   font-size: 18px;
-  color: #333;
+  color: var(--cor-do-texto);
   margin-top: 30px;
 }
 
 #cardapio article {
   font-size: 14px;
-  color: #333;
+  color: var(--cor-do-texto);
 }
 
 
@@ -91,7 +102,7 @@ html, body, #recipiente {
 #cabecalho-pagina h1 {
   margin: 0;
   font-size: 36px;
-  color: #e90c0c;
+  color: var(--cor-cabecalho-h1);
   font-weight: normal;
   text-align: center;
 }
@@ -99,7 +110,7 @@ html, body, #recipiente {
 #cabecalho-pagina h2 {
   margin: 0;
   font-size: 24px;
-  color: #333;
+  color: var(--cor-do-texto);
   font-weight: normal;
   text-align: end;
 }
@@ -164,3 +175,15 @@ article {
 /* coloque aqui a media query para sobrescrever o valor
    das custom properties para o modo escuro */
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cor-do-fundo: #111;
+    --cor-cardapio: rgba(10, 10, 10, 0.2);
+    --cor-do-texto: #ccc;
+    --cor-cabecalho-h1: #16f3f3;
+    --cor-grad-a: #090e4d;
+    --cor-grad-b: #ba664d;
+    --cor-border-cardapio: #553f51;
+    --cor-border-fora: #2c2c2c;
+  }
+}
