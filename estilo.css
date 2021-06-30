@@ -4,13 +4,13 @@
 @import "fonts/ravie.css";
 
 body {
-  font-family: "Verdana";
+  font-family: "Verdana", sans-serif;
   background-color: #fff;
   margin: 0px;
 }
 
 h1 {
-  font-family: "Ravie";
+  font-family: "Ravie", sans-serif;
 }
 
 strong {
@@ -32,6 +32,8 @@ html, body, #recipiente {
   border-top: 1px solid #aac0ae;
   border-bottom: 1px solid #aac0ae;
   border-left: 1px solid #aac0ae;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 #cardapio h3 {
@@ -104,6 +106,9 @@ html, body, #recipiente {
 
 /* EXERCÍCIO 4: cada item do menu */
 article {
+  display: flex;
+  justify-content: space-between;
+  line-height: 2em;
 }
 
 
